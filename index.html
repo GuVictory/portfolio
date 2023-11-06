@@ -4,9 +4,165 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style type="text/css">
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                background-color: #060815;
+            }
+            body {
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                -webkit-font-smoothing: antialiased;
+            }
+            .ipl-progress-indicator.available {
+                opacity: 0;
+            }
+            .ipl-progress-indicator {
+                background-color: #060815;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                opacity: 1;
+                pointer-events: none;
+                -webkit-transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
+                -moz-transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
+                transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
+                z-index: 9999;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .ipl-progress-indicator-head {
+                background-color: #060815;
+                height: 4px;
+                overflow: hidden;
+                position: relative;
+            }
+            .ipl-progress-indicator-bottom {
+                background-color: #060815;
+                height: 4px;
+                overflow: hidden;
+                position: relative;
+                bottom: 0;
+            }
+            .ipl-progress-indicator .first-indicator,
+            .ipl-progress-indicator .second-indicator {
+                background-color: #8a60f6;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+                position: absolute;
+                -webkit-transform-origin: left center;
+                -moz-transform-origin: left center;
+                transform-origin: left center;
+                -webkit-transform: scaleX(0);
+                -moz-transform: scaleX(0);
+                transform: scaleX(0);
+            }
+            .ipl-progress-indicator .first-indicator {
+                -webkit-animation: first-indicator 2s linear infinite;
+                -moz-animation: first-indicator 2s linear infinite;
+                animation: first-indicator 2s linear infinite;
+            }
+            .ipl-progress-indicator .second-indicator {
+                -webkit-animation: second-indicator 2s linear infinite;
+                -moz-animation: second-indicator 2s linear infinite;
+                animation: second-indicator 2s linear infinite;
+            }
+            .ipl-progress-indicator .insp-logo {
+                animation: App-logo-spin infinite 20s linear;
+                border-radius: 50%;
+                -webkit-align-self: center;
+                -moz-align-self: center;
+                align-self: center;
+            }
+            @keyframes App-logo-spin {
+                from {
+                    transform: rotate(0);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            @-webkit-keyframes fadein {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @-moz-keyframes fadein {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes fadein {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes first-indicator {
+                0% {
+                    transform: translate(0) scaleX(0);
+                }
+                25% {
+                    transform: translate(0) scaleX(0.5);
+                }
+                50% {
+                    transform: translate(25%) scaleX(0.75);
+                }
+                75% {
+                    transform: translate(100%) scaleX(0);
+                }
+                100% {
+                    transform: translate(100%) scaleX(0);
+                }
+            }
+            @keyframes second-indicator {
+                0% {
+                    transform: translate(0) scaleX(0);
+                }
+                60% {
+                    transform: translate(0) scaleX(0);
+                }
+                80% {
+                    transform: translate(0) scaleX(0.6);
+                }
+                100% {
+                    transform: translate(100%) scaleX(0.1);
+                }
+            }
+        </style>
+
         <title>GuVictory | Portfolio</title>
     </head>
     <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+
+        <div class="ipl-progress-indicator" id="ipl-progress-indicator">
+            <div class="ipl-progress-indicator-head">
+                <div class="first-indicator"></div>
+                <div class="second-indicator"></div>
+            </div>
+            <div class="ipl-progress-indicator-bottom">
+                <div class="first-indicator"></div>
+                <div class="second-indicator"></div>
+            </div>
+        </div>
+
         <div id="root"></div>
         <script type="module" src="/src/main.tsx"></script>
     </body>

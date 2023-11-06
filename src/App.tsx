@@ -11,15 +11,17 @@ import {
     Tech,
     Study,
 } from './components';
-import { AppLoader } from './components/AppLoader';
 
 export const App = () => {
-    const [loaded, setLoaded] = useState(false);
-
     useEffect(() => {
         const onPageLoad = () => {
-            console.log('page loaded');
-            setLoaded(true);
+            const ele = document.getElementById('ipl-progress-indicator');
+            if (ele) {
+                ele.classList.add('available');
+                setTimeout(() => {
+                    ele.outerHTML = '';
+                }, 2000);
+            }
         };
 
         if (document.readyState === 'complete') {
@@ -29,10 +31,6 @@ export const App = () => {
             return () => window.removeEventListener('load', onPageLoad);
         }
     }, []);
-
-    if (!loaded) {
-        return <AppLoader />;
-    }
 
     return (
         <BrowserRouter>
