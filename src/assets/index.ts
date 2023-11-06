@@ -29,6 +29,10 @@ import carrent from './carrent.png';
 import jobit from './jobit.png';
 import tripguide from './tripguide.png';
 
+import mgtu from './study/mgtu.png';
+import mailru from './study/mailru.png';
+import pract from './study/practicum.jpeg';
+
 export {
     logo,
     backend,
@@ -57,4 +61,7 @@ export {
     carrent,
     jobit,
     tripguide,
+    mgtu,
+    mailru,
+    pract,
 };

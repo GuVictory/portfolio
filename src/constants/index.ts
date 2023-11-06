@@ -22,6 +22,9 @@ import {
     jobit,
     tripguide,
     threejs,
+    mailru,
+    pract,
+    mgtu,
 } from '../assets';
 
 export const navLinks = [
@@ -161,6 +164,34 @@ const experiences = [
     },
 ];
 
+const studies = [
+    {
+        title: 'Вычислительная математика и компьютерные науки',
+        field: 'Факультет: Фундаментальные науки',
+        place: 'МГТУ им Н. Э. Баумана',
+        level: 'Бакалавриат',
+        icon: mgtu,
+        iconBg: '#9e9e9e',
+        date: 'Сентябрь 2017 - Июль 2021',
+    },
+    {
+        title: 'Менеджер проектов',
+        place: 'Яндекс Практикум',
+        level: 'Повышение квалификации',
+        icon: pract,
+        iconBg: '#424242',
+        date: 'Октябрь 2021 - Апрель 2022',
+    },
+    {
+        title: 'Архитектор высоконагруженных систем',
+        place: 'Технопарк Mail.ru',
+        level: 'Повышение квалификации',
+        icon: mailru,
+        iconBg: '#e3e3e3',
+        date: 'Сентябрь 2018 - Май 2020',
+    },
+];
+
 const testimonials = [
     {
         testimonial:
@@ -254,4 +285,4 @@ const projects = [
     },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, studies };
