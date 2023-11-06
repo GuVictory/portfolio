@@ -11,7 +11,6 @@ import {
     redux,
     tailwind,
     nodejs,
-    mongodb,
     git,
     figma,
     docker,
@@ -25,6 +24,8 @@ import {
     mailru,
     pract,
     mgtu,
+    psql,
+    ts,
 } from '../assets';
 
 export const navLinks = [
@@ -99,8 +100,8 @@ const technologies = [
         icon: nodejs,
     },
     {
-        name: 'MongoDB',
-        icon: mongodb,
+        name: 'PostgreSQL',
+        icon: psql,
     },
     {
         name: 'Three JS',
@@ -117,6 +118,10 @@ const technologies = [
     {
         name: 'docker',
         icon: docker,
+    },
+    {
+        name: 'TeamCity',
+        icon: ts,
     },
 ];
 
