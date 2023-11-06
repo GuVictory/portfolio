@@ -49,13 +49,13 @@ const Navbar = () => {
                     className={`${
                         mobile
                             ? 'list-none flex flex-col gap-4 justify-end items-start'
-                            : 'list-none hidden sm:flex flex-row gap-10 '
+                            : 'list-none hidden sm:flex flex-row gap-10'
                     }`}
                     ref={mobileMenuRef}
                 >
                     {navLinks.map((navItem) => (
                         <li
-                            id={navItem.id}
+                            key={navItem.id}
                             className={`${
                                 active === navItem.id
                                     ? 'text-white'
