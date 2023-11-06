@@ -29,10 +29,11 @@ const Stars = (props) => {
             >
                 <PointMaterial
                     transparent
-                    color="#f272c8"
+                    color="#f3c1e2"
                     size={0.002}
                     sizeAttenuation={true}
                     depthWrite={false}
+                    opacity={0.3}
                 />
             </Points>
         </group>
