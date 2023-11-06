@@ -17,9 +17,9 @@ import {
     yandex,
     cloud,
     wb,
-    carrent,
-    jobit,
-    tripguide,
+    mtsBot,
+    holy2023,
+    thCourse,
     threejs,
     mailru,
     pract,
@@ -35,7 +35,7 @@ export const navLinks = [
     },
     {
         id: 'study',
-        title: 'Обазование',
+        title: 'Образование',
     },
     {
         id: 'work',
@@ -67,14 +67,14 @@ const services = [
 ];
 
 const technologies = [
-    {
-        name: 'HTML 5',
-        icon: html,
-    },
-    {
-        name: 'CSS 3',
-        icon: css,
-    },
+    // {
+    //     name: 'HTML 5',
+    //     icon: html,
+    // },
+    // {
+    //     name: 'CSS 3',
+    //     icon: css,
+    // },
     {
         name: 'JavaScript',
         icon: javascript,
@@ -226,67 +226,45 @@ const testimonials = [
 
 const projects = [
     {
-        name: 'Car Rent',
+        name: 'Курс по Three.js',
         description:
-            'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+            'Это видео-курс по началу работы с three.js. Здесь вы получите основы для начала своего приключения с этим великолепным инструментом, а в дальнейшем и более прокаченные знания для создания уже сложных проектов. Вы изучите подробно все аспекты, от базовых понятий до более продвинутых.',
         tags: [
             {
-                name: 'react',
-                color: 'blue-text-gradient',
-            },
-            {
-                name: 'mongodb',
-                color: 'green-text-gradient',
-            },
-            {
-                name: 'tailwind',
+                name: 'контент',
                 color: 'pink-text-gradient',
             },
         ],
-        image: carrent,
-        source_code_link: 'https://github.com/',
+        image: thCourse,
+        source_code_link:
+            'https://dzen.ru/suite/82129974-5f56-4c3f-a6e8-058dc3ec64ea',
     },
     {
-        name: 'Job IT',
+        name: 'Three.js: синхронизация звука и графики',
         description:
-            'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+            'Доклад про совмещение звука и визуализации в единую эмоциональную и кинематографичную сцену. Я рассмотрела увлекательное сочетание трехмерной графики и звука, используя возможности Three.js и Audio API.',
         tags: [
             {
-                name: 'react',
+                name: 'доклад',
                 color: 'blue-text-gradient',
             },
-            {
-                name: 'restapi',
-                color: 'green-text-gradient',
-            },
-            {
-                name: 'scss',
-                color: 'pink-text-gradient',
-            },
         ],
-        image: jobit,
-        source_code_link: 'https://github.com/',
+        image: holy2023,
+        source_code_link:
+            'https://holyjs.ru/talks/c2c2f17cc0ad498c846d474d4ff9de2b/?referer=%2Fschedule%2Ftopics%2F#topic-11',
     },
     {
-        name: 'Trip Guide',
+        name: 'MTS Pay Bot',
         description:
-            'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+            'Проект - заказная разработка для компании MTS. Основная идея - дать возможность жителям Москвы оплачивать налоги и благотворительность при помощи webapp внутри telegram.',
         tags: [
             {
-                name: 'nextjs',
-                color: 'blue-text-gradient',
-            },
-            {
-                name: 'supabase',
+                name: 'проект',
                 color: 'green-text-gradient',
             },
-            {
-                name: 'css',
-                color: 'pink-text-gradient',
-            },
         ],
-        image: tripguide,
-        source_code_link: 'https://github.com/',
+        image: mtsBot,
+        source_code_link: 'https://github.com/aabounegm/MTS-Telegram-bot',
     },
 ];
 

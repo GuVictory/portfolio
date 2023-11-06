@@ -1,9 +1,10 @@
 import logo from './logo.svg';
-import backend from './backend.png';
-import creator from './creator.png';
-import mobile from './mobile.png';
-import web from './web.png';
+import backend from './icons/backend.png';
+import creator from './icons/creator.png';
+import mobile from './icons/mobile.png';
+import web from './icons/web.png';
 import github from './github.png';
+import link from './link.png';
 import menu from './menu.svg';
 import close from './close.svg';
 
@@ -26,9 +27,9 @@ import cloud from './company/cloud.png';
 import yandex from './company/yandex.png';
 import wb from './company/wb.png';
 
-import carrent from './carrent.png';
-import jobit from './jobit.png';
-import tripguide from './tripguide.png';
+import holy2023 from './projects/holy_2023.png';
+import mtsBot from './projects/mts_bot.png';
+import thCourse from './projects/th_course.png';
 
 import mgtu from './study/mgtu.png';
 import mailru from './study/mailru.png';
@@ -58,12 +59,13 @@ export {
     cloud,
     yandex,
     wb,
-    carrent,
-    jobit,
-    tripguide,
+    thCourse,
+    mtsBot,
+    holy2023,
     mgtu,
     mailru,
     pract,
     psql,
     ts,
+    link,
 };

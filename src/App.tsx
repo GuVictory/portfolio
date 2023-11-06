@@ -25,7 +25,7 @@ export const App = () => {
                 <Experience />
                 <Tech />
                 <Works />
-                <Feedbacks />
+                {/* <Feedbacks /> */}
                 <div className="reletive z-0 ">
                     <Contact />
                     <StarsCanvas />
