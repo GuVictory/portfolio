@@ -1,9 +1,9 @@
+import { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import {
     About,
     Contact,
     Experience,
-    Feedbacks,
     Hero,
     Navbar,
     Works,
@@ -11,8 +11,29 @@ import {
     Tech,
     Study,
 } from './components';
+import { AppLoader } from './components/AppLoader';
 
 export const App = () => {
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        const onPageLoad = () => {
+            console.log('page loaded');
+            setLoaded(true);
+        };
+
+        if (document.readyState === 'complete') {
+            onPageLoad();
+        } else {
+            window.addEventListener('load', onPageLoad, false);
+            return () => window.removeEventListener('load', onPageLoad);
+        }
+    }, []);
+
+    if (!loaded) {
+        return <AppLoader />;
+    }
+
     return (
         <BrowserRouter>
             <div className="relative z-0 bg-primary">
