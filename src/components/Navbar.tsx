@@ -39,8 +39,9 @@ const Navbar = () => {
     };
 
     const handleMobileMenuClick = useCallback(() => {
-        setToggle((prev) => !prev);
-    }, []);
+        console.log(toggle);
+        setToggle(!toggle);
+    }, [toggle]);
 
     const navMenu = useCallback(
         (mobile?: boolean) => {
@@ -51,7 +52,6 @@ const Navbar = () => {
                             ? 'list-none flex flex-col gap-4 justify-end items-start'
                             : 'list-none hidden sm:flex flex-row gap-10'
                     }`}
-                    ref={mobileMenuRef}
                 >
                     {navLinks.map((navItem) => (
                         <li
@@ -81,6 +81,7 @@ const Navbar = () => {
     return (
         <nav
             className={`${styles.paddingX} w-full flex items-center py-5 fixed z-20  bg-primary `}
+            ref={mobileMenuRef}
         >
             <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
                 <Link
