@@ -52,8 +52,8 @@ const Feedbacks = () => {
                 className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
             >
                 <motion.div variants={textVariant(0.1)}>
-                    <p className={styles.sectionSubText}>What others say</p>
-                    <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+                    <p className={styles.sectionSubText}>Что говорят другие</p>
+                    <h2 className={styles.sectionHeadText}>Отзывы.</h2>
                 </motion.div>
             </div>
             <div

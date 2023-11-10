@@ -10,6 +10,7 @@ import {
     StarsCanvas,
     Tech,
     Study,
+    Feedbacks,
 } from './components';
 
 export const App = () => {
